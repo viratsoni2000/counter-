@@ -1,0 +1,69 @@
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>*{user-select: none;}
+.container{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+.main{
+  
+  color: rgb(0, 0, 0);
+  width: 200px;
+  height: 50px;
+  text-align: center;
+  padding-top: 30px;
+  background-color:#fab3a8;
+  border-radius: 0 10px ;
+  box-shadow: 5px 2px 5px rgba(112, 52, 52,0.5)
+}
+button{
+  color: #000000;
+  background-color: rgba(112, 52, 52,0.5);
+  border: none;
+  box-shadow: 1px 2px  #000000;
+  
+}
+</style>
+
+<body>
+  <div class="container">
+    <div class="main">
+     <button id="btn1">increas</button> 
+     <span id=placeholder>0</span>
+     <button id="btn2">decreas</button>
+     <button id="res">reset</button>
+    </div> 
+  </div>   
+     <script>
+        var place = document.getElementById('placeholder');
+        var incres = document.getElementById('btn1');
+        var decres = document.getElementById('btn2');
+        var reset = document.getElementById('res');
+        var number = 0
+
+       incres.addEventListener('click',function(){
+        number++;
+        place.innerHTML = number; 
+       })
+       decres.addEventListener('click',function(){
+        number--;
+        place.innerHTML =number;
+       })
+       res.addEventListener('click',function(){
+        number=0
+         place.innerHTML =number;
+       })
+
+     </script>
+</body>
+</html>
